@@ -43,6 +43,7 @@ Collections of URLs pointing to traffic information portals which contain open d
   * [Bolzano](http://traffic.bz.it/) documentation [here](http://ipchannels.integreen-life.bz.it/doc/), repo [here](https://github.com/tis-innovation-park/BZtraffic). See [#1](https://github.com/graphhopper/open-traffic-collection/pull/1)
   * South Tyrol: [traffic reports](https://www.europeandataportal.eu/data/#/datasets/p_bz-webservices-southtyrolean-trafficreport-currentsituation), [mountain pass conditions and closures](https://www.europeandataportal.eu/data/#/datasets/p_bz-webservices-southtyrolean-trafficreport-mountainroadsandpasses), [roadworks and closures](https://www.europeandataportal.eu/data/#/datasets/p_bz-webservices-southtyrolean-trafficreport-works-closings). They also advertise [reports from neighboring regions](https://www.europeandataportal.eu/data/#/datasets/p_bz-webservices-southtyrolean-trafficreport-outofprovince) but the feed seems to be empty. Available custom GML, JSON or CSV formats.
   * [Turin, Italy](http://opendata.5t.torino.it/get_fdt) documentation [here](http://www.5t.torino.it/wp-content/uploads/2016/04/flussi_traffico_rt.pdf). See [#13](https://github.com/graphhopper/open-traffic-collection/issues/13)
+ * [Latvia](https://transportdata.gov.lv/en): the Latvian National Access Point (publisher VSIA "Latvijas Valsts ceļi"). 55 datasets in Datex-II v3 format covering accidents and incidents, road closures, roadworks, restrictions and weather, all released under CC0. Requires a free account, then subscribe per dataset card. 
  * Lithuania:
    * [traffic count](http://lakd.lrv.lt/lt/atviri-duomenys)
    * [restrictions](http://restrictions.eismoinfo.lt/): Roadworks, road closures and restrictions, incidents; JSON-based format similar to Waze CIFS. More information at http://eismoinfo.lt > Open data/Atviri duomenys.
@@ -59,13 +60,17 @@ Collections of URLs pointing to traffic information portals which contain open d
 * Poland:
   * [Traffic events](https://www.gddkia.gov.pl/dane/zima_html/utrdane.xml) in a custom XML format. Georeferencing is based on distance markers along the road; the WGS84 coordinate pair which accompanies the message is only suitable for display and can be significantly off. [traff-gddkia](https://gitlab.com/traffxml/traff-gddkia) is an attempt at a FOSS Java library which parses the data.
   * The [NAP](https://kpd.gddkia.gov.pl/) has Datex-II traffic data; registration is required to get access.
-* [Slovenia](https://www.promet.si/portal/en/etd.aspx): various data sets in Datex-II format, requires registration.
+ * Portugal:
+   * [National Access Point](https://nap-portugal.imt-ip.pt/): the NAPCORE "MultimodalSupplies" catalog API is reachable as anonymous JSON. The catalog is heavily public-transport (GTFS); road-traffic Datex-II is municipal rather than national. 
+   * [Porto - unplanned road conditions](https://opendata.porto.digital/) (Datex-II v3 XML, ODbL): live road events and closures for the city of Porto. EMEL (Lisbon) publishes parking and traffic-regulation Datex-II on the same NAP. National motorway events sit with the concessionaires and are not open. 
+ * [Slovenia](https://www.promet.si/portal/en/etd.aspx): various data sets in Datex-II format, requires registration.
 * Spain
   * [Madrid](https://datos.madrid.es/portal/site/egob/menuitem.c05c1f754a33a9fbe4b2e4b284f1a5a0/?vgnextoid=33cb30c367e78410VgnVCM1000000b205a0aRCRD&vgnextchannel=374512b9ace9f310VgnVCM100000171f5a0aRCRD&vgnextfmt=default): Historical and real-time traffic data at city of Madrid's Open data portal
 * Sweden:
   * [Gothenbury](http://www.statistik.tkgbg.se/)
   * [Various data sets in Datex-II](https://www.trafikverket.se/tjanster/Oppna_data/oppna-data-vi-erbjuder/), registration required
 * [Switzerland](https://www.astra.admin.ch/astra/de/home/dokumentation/daten-informationsprodukte/verkehrsdaten.html) traffic count only
+ * [Ukraine](https://data.gov.ua/): no national ITS NAP / Datex-II, but the national open-data portal (CKAN) publishes traffic-relevant datasets under CC BY 4.0 - e.g. accident black-spots / hazardous road sections (with WGS84 start and end coordinates), Kyiv road closures and repairs, and historical border-crossing truck-queue records. It is a dataset-by-dataset source rather than a single feed; note that some .gov.ua hosts geo-restrict non-Ukrainian IPs.
 * UK:
   * [England](https://www.trafficengland.com/services-info): various Datex-II data sets, registration required.
   * [Scotland](https://trafficscotland.org/datex/): various Datex-II data sets, registration required.
